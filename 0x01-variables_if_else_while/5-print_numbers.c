@@ -12,5 +12,5 @@ int main(void)
 	for (; a < 10; a++)
 		printf("%d", a);
 	putchar ('\n);
-	ireturn (0);
+	return (0);
 }
