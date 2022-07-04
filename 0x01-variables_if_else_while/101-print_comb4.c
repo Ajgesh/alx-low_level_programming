@@ -10,21 +10,24 @@ int main(void)
 	int i;
 		int j;
 		int k;
+		int g;
 
-		for (i = 48; j < 58; i++)
+		for (i = 48; i <= 57; i++)
 		{
-			for (j = 49; j < 58; j++)
+			for (j = 48; j <= 57; j++)
 			{
-				for (k = 50; k < 58; k++)
+				for (k = 48; k <= 57; k++)
 				{
-					if (i == j || j == k || i == k)
+					for (g = 48; g <= 57; g++)
 					{
-					continue;
-					}
+					if (((i + j) > (g + k) && i > g) || g < i)
+					{
 					putchar (i);
 					putchar (j);
+					putchar (' ');
+					putchar (g);
 					putchar (k);
-					if (i == 55 && j == 56 && k == 57)
+					if (i + j + k + g == 227 && i == 57
 					{
 						break;
 					}
@@ -33,8 +36,9 @@ int main(void)
 						putchar (',');
 						putchar (' ');
 					}
+					}
+					}
 				}
-			}
 		}
 		putchar ('\n');
 		return (0);
