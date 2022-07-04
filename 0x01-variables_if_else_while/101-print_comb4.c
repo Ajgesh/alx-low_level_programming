@@ -17,18 +17,12 @@ int main(void)
 			{
 				for (k = 50; k < 58; k++)
 				{
-					if (i == j || j == k || i == k)
+					if (k > j && j > i)
 					{
-						continue;
-					}
 					putchar (i);
 					putchar (j);
 					putchar (k);
-					if (i != 55 && j != 56 && k != 57)
-					{
-						break;
-					}
-					else
+					if (i != 55 || j != 56)
 					{
 						putchar (',');
 						putchar (' ');
