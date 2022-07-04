@@ -15,7 +15,7 @@ int main(void)
 		putchar (a);
 		a++;
 	}
-	a = 'i';
+	a = '1';
 	for (i = 0; i < 6; i++)
 	{
 		putchar ('o' + a);
