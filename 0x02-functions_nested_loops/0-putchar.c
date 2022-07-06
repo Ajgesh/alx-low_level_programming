@@ -1,14 +1,10 @@
 #include "main.h"
 
 /**
+ * main - function to print
  *
- *  * main - function to print
- *
- *   *
- *
- *    * Return: 0
- *
- *    */
+ * Return: 0
+ */
 
 int main(void)
 
