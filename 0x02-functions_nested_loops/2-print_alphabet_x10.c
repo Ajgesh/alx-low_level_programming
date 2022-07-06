@@ -15,6 +15,7 @@ void print_alphabet_x10(void)
 			char alpha;
 			while (coun++ <= 9)
 			{
+			
 				for (alpha = 97; alpha <= 122; alpha++)
 					_putchar(alpha);
 				_putchar('\n');
