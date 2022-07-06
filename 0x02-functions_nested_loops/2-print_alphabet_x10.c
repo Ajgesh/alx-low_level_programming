@@ -10,25 +10,22 @@ void print_alphabet_x10(void)
 
 {
 
-		char c, i;
+		int coun = 0;
 
-		:wq
+			char alpha;
 
-				for (i = 0; i <= 9; i++)
+
+
+				while (coun++ <= 9)
 
 						{
 
-									for (c = 'a'; c <= 'z'; c++)
+									for (alpha = 97; alpha <= 122; alpha++)
 
-												{
+													_putchar(alpha);
 
-																_putchar(c);
+											_putchar('\n');
 
-																		}
-
-											_putchar('\n');:
-
-													}
+												}
 
 }
-
