@@ -17,8 +17,6 @@ int main(void)
 	/* {*/
 	/* putchar(i);*/
 	/* }*/
-  /* dont delete this file*/
-
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
