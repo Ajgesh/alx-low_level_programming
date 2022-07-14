@@ -1,16 +1,35 @@
 #include "main.h"
 
 /**
- * _isdigit - checks for characters that are digits
- *@c: character
+ * _strncat - concatenate two strings
+ * @dest: the string to append to
+ * @src: the string to append
+ * @n: the maximum number of bytes to append from src
  *
- * Return: 0 or 1
+ * Description: This function appends the string pointed to by src to the
+ * string pointed to by dest, overwriting the null byte at the end of dest,
+ * and then adding a terminating null byte, using most n bytes from src.
+ *
+ * Return: a pointer to the destination string dest
  */
-int _isdigit(int c)
+char *_strncat(char *dest, char *src, int n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+char *dest_end = dest;
+int src_len = 0;
+
+while (*dest_end)
+++dest_end;
+
+while (src_len < n && src[src_len])
+++src_len;
+
+if (src + src_len < dest || dest_end + src_len < src)
+{
+while (src_len--)
+*dest_end++ = *src++;
+*dest_end = '\0';
+
+}
+return (dest);
 
 }
