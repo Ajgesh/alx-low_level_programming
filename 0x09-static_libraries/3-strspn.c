@@ -1,29 +1,30 @@
 #include "main.h"
 
 /**
- * _strcmp - compare two strings
- * @s1: a string to compare
- * @s2: the other string to compare
+ * _strspn - get length of a prefix substring
+ * @s: the string to search
+ * @accept: the characters to allow in the substring
  *
- * Description: This functions compares two strings pointed to by s1 and s2.
+ * Description: calculates the length (in bytes) of the initial segment of s
+ * which consists entirely of bytes in accept.
  *
- * Return: 0 if s1 matches s2,
- * otherwise an integer less than 0 if s1 is less than s2,
- * otherwise an integer greater than 0 if s1 is greater than s2.
- *
+ * Return: number of bytes in the initial segment of s which consist only of
+ * bytes fron accept.
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-for (; *s1 && *s2; ++s1, ++s2)
+unsigned int i;
+char *accept_pos;
+
+for (i = 0; s[i]; ++i)
 {
-if (*s1 != *s2)
-return (*s1 - *s2);
+for (accept_pos = accept; *accept_pos; ++accept_pos)
+{
+if (s[i]  == *accept_pos)
+break;
 }
-if (*s1)
-return (1);
-if (*s2)
-return (-1);
-
-return (0);
-
+if (!*accept_pos)
+break;
+}
+return (i);
 }
